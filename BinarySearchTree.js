@@ -50,3 +50,19 @@ const four = (root, p, q) => {
         : three(p.val < root.val ? root.left : root.right, p, q);
     
 };
+
+
+
+
+const isSymmetric =  (root) => isSameTree(root,root)
+    
+const isSameTree =  (p, q) => !p || !q ? p === q :   
+    p.val === q.val 
+    && isSameTree(p.right , q.left) 
+    && isSameTree(p.left, q.right)
+    
+
+
+
+
+
