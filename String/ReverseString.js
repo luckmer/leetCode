@@ -4,6 +4,4 @@
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
-const reverseString = (s) => {
-  return s.reverse();
-};
+const reverseString = (s) => s.reverse();
