@@ -24,3 +24,14 @@ const minOperations = (n) => {
 
   return even;
 };
+
+const minOperations = (n) => {
+  let counter = 0;
+
+  if (n % 2 === 0) {
+    counter += (n * n) / 4;
+  } else {
+    counter += (n * n - 1) / 4;
+  }
+  return counter;
+};
