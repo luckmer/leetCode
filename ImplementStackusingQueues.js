@@ -27,6 +27,8 @@
 // myStack.top(); // return 2
 // myStack.pop(); // return 2
 // myStack.empty(); // return False
+ 
+WRONG!
 
 
 class MyStack {
