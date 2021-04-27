@@ -27,4 +27,5 @@ const relativeSortArray = (arr1, arr2)=> {
 let result = auxArr.sort((a, b) => a - b);
     
 return [...sortedArr,...result] 
+  
 };
