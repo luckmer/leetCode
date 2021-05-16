@@ -23,3 +23,5 @@ const maxProfit = (prices, fee) => {
   }
   return result;
 };
+
+exports.maxProfit = maxProfit;
