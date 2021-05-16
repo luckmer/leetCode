@@ -41,3 +41,5 @@ const maximumWealth = (accounts) => {
 
   return sortedArray[sortedArray.length - 1];
 };
+
+exports.maximumWealth = maximumWealth;
