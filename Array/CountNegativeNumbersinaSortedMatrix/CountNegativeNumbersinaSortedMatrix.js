@@ -21,15 +21,17 @@
 //todo Output: 1
 
 const countNegatives = (grid) => {
-    let numb = 0;
-    let N = grid.length;
-    let V = grid[0].length;
-    for (let i = 0; i < N; i++) {
-        for (let j = 0; j < V; j++) {
-            if (grid[i][j] < 0) {
-                numb++;
-            }
-        }
+  let numb = 0;
+  let N = grid.length;
+  let V = grid[0] && grid[0].length;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < V; j++) {
+      if (grid[i][j] < 0) {
+        numb++;
+      }
     }
-    return numb;
+  }
+  return numb;
 };
+
+exports.countNegatives = countNegatives;
