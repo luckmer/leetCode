@@ -6,46 +6,42 @@
 // Both rows have the same number of soldiers and i < j.
 // Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
 
- 
-
 // Example 1:
 
-// Input: mat = 
+// Input: mat =
 // [[1,1,0,0,0],
 //  [1,1,1,1,0],
 //  [1,0,0,0,0],
 //  [1,1,0,0,0],
-//  [1,1,1,1,1]], 
+//  [1,1,1,1,1]],
 // k = 3
 // Output: [2,0,3]
-// Explanation: 
-// The number of soldiers in each row is: 
-// - Row 0: 2 
-// - Row 1: 4 
-// - Row 2: 1 
-// - Row 3: 2 
-// - Row 4: 5 
+// Explanation:
+// The number of soldiers in each row is:
+// - Row 0: 2
+// - Row 1: 4
+// - Row 2: 1
+// - Row 3: 2
+// - Row 4: 5
 // The rows ordered from weakest to strongest are [2,0,3,1,4].
 // Example 2:
 
-// Input: mat = 
+// Input: mat =
 // [[1,0,0,0],
 //  [1,1,1,1],
 //  [1,0,0,0],
-//  [1,0,0,0]], 
+//  [1,0,0,0]],
 // k = 2
 // Output: [0,2]
-// Explanation: 
-// The number of soldiers in each row is: 
-// - Row 0: 1 
-// - Row 1: 4 
-// - Row 2: 1 
-// - Row 3: 1 
+// Explanation:
+// The number of soldiers in each row is:
+// - Row 0: 1
+// - Row 1: 4
+// - Row 2: 1
+// - Row 3: 1
 // The rows ordered from weakest to strongest are [0,2,3,1].
 
-
-
-const kWeakestRows =(mat, k) =>  {
+const kWeakestRows = (mat, k) => {
   return mat
     .map((value, i) => {
       let counter = 0;

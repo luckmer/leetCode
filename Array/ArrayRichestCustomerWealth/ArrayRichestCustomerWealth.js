@@ -2,8 +2,6 @@
 
 // A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
 
- 
-
 // Example 1:
 
 // Input: accounts = [[1,2,3],[3,2,1]]
@@ -16,16 +14,15 @@
 
 // Input: accounts = [[1,5],[7,3],[3,5]]
 // Output: 10
-// Explanation: 
+// Explanation:
 // 1st customer has wealth = 6
-// 2nd customer has wealth = 10 
+// 2nd customer has wealth = 10
 // 3rd customer has wealth = 8
 // The 2nd customer is the richest with a wealth of 10.
 // Example 3:
 
 // Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
 // Output: 17
-
 
 const maximumWealth = (accounts) => {
   const countAccounts = accounts.map((value, i) => {
@@ -41,6 +38,6 @@ const maximumWealth = (accounts) => {
   const sortedArray = countAccounts
     .sort((a, b) => a[1] - b[1])
     .map((el) => el[1]);
-    
+
   return sortedArray[sortedArray.length - 1];
 };
