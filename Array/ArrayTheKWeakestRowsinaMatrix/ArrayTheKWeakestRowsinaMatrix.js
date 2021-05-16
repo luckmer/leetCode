@@ -56,3 +56,5 @@ const kWeakestRows = (mat, k) => {
     .slice(0, k)
     .map((el) => el[0]);
 };
+
+exports.kWeakestRows = kWeakestRows;
