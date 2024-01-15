@@ -17,8 +17,8 @@ const merge = (nums1, m, nums2, n) => {
 };
 
 var merge2 = function (nums1, m, nums2, n) {
-  nums1.splice(m, nums1.length - n);
+  nums1.splice(nums1.length - n);
   nums1.push(...nums2);
-  nums1.length = m + n;
+  nums1.slice(0, m);
   return nums1.sort((a, b) => a - b);
 };
