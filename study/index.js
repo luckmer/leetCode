@@ -122,12 +122,65 @@ class Queue {
 }
 const quickQueue = new Queue();
 
-quickQueue.enqueue("value1");
-quickQueue.enqueue("value2");
-quickQueue.enqueue("value3");
+// quickQueue.enqueue("value1");
+// quickQueue.enqueue("value2");
+// quickQueue.enqueue("value3");
 
-console.log(quickQueue.first);
-console.log(quickQueue.last);
-console.log(quickQueue.size);
-quickQueue.enqueue("value4");
-console.log(quickQueue.dequeue());
+// console.log(quickQueue.first);
+// console.log(quickQueue.last);
+// console.log(quickQueue.size);
+// quickQueue.enqueue("value4");
+// console.log(quickQueue.dequeue());
+
+class node {
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+
+  toString(callback) {
+    return callback ? callback(this.value) : `${this.value}`;
+  }
+}
+
+class linkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+  }
+
+  prepend(value) {
+    // Make new node to be a head.
+    const newNode = new node(value, this.head);
+    this.head = newNode;
+    if (!this.tail) {
+      this.tail = newNode;
+    }
+    this.size++;
+    return this;
+  }
+
+  append(value) {
+    const newNode = new node(value, this.head);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    }
+
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+    return this;
+  }
+}
+
+const enable = new linkedList();
+
+enable.prepend(1);
+enable.prepend(2);
+enable.prepend(3);
+enable.prepend(4);
+enable.append(5);
+
+console.log(enable);
