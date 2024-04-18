@@ -44,11 +44,17 @@
  * }
  */
 
+// generate a linked list
+
 /**
  * @param {ListNode} headA
  * @param {ListNode} headB
  * @return {ListNode}
  */
+
+
+
+ 
 var getIntersectionNode = function (headA, headB) {
   let top = headA;
   let bottom = headB;

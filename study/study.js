@@ -113,12 +113,30 @@ class LinkedList {
     }
     return deletedNode;
   }
+
+  deleteDuplicates(head) {
+    if (!head) return head;
+
+    let current = head;
+
+    while (current.next) {
+      if (current.val === current.next.val) {
+        current.next = current.next.next;
+      } else {
+        current = current.next;
+      }
+    }
+    return head;
+  }
 }
 
 const data = new LinkedList();
 
 data.add(1);
+data.add(1);
 data.add(2);
-const res = data.deleteValue(2);
+data.add(2);
+
+data.deleteDuplicates(data.head);
 
 console.log(data.toArray());
