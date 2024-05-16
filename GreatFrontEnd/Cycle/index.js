@@ -1,10 +1,9 @@
 function toggle(...values) {
-  let index = 0;
+  let index = -1;
 
   return () => {
-    const el = values[index];
     index = (index + 1) % values.length;
-    return el;
+    return values[index];
   };
 }
 
