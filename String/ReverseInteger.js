@@ -24,3 +24,8 @@ const reverse = (x) => {
 
   return result < Math.pow(-2, 31) || Math.pow(2, 31) < result ? 0 : result;
 };
+
+console.log(reverse(123)); // 321
+console.log(reverse(-123)); // -321
+console.log(reverse(120)); // 21
+console.log(reverse(1534236469)); // 0
