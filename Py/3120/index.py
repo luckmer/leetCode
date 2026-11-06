@@ -1,14 +1,14 @@
 class Solution:
     def numberOfSpecialChars(self, word: str) -> int:
-        arr: list[str] = []
+        count = {}
 
-        for i in range(len(word)):
-            el = word[i].lower()
+        for el in word:
+            key = el.lower()
 
-            if el.lower() in word and el.upper() in word and el not in arr:
-                arr.append(el)
+            if el.lower() in word and el.upper() in word:
+                count[key] = count.get(key, 0) + 1
 
-        return len(arr)
+        return len(count)
 
 
 solution = Solution()
